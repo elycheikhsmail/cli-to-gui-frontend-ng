@@ -1,0 +1,29 @@
+
+
+<a routerLink="/" class="w3-btn w3-green"> home </a>
+<p>action-add works!</p>
+
+
+<form class="w3-row-padding" [formGroup]="actionForm">
+  <p>
+      <label htmlFor="actionName">action name</label>
+      <input type="text"
+      formControlName="name"
+        class="w3-input w3-border"/>
+  </p>
+  <p>
+      <label htmlFor="actionDesc">action desc</label>
+      <input type="text"
+      formControlName="desc"
+       class="w3-input w3-border"/>
+  </p>
+  <p>
+      <button  class="w3-btn w3-border" (click)="handleForm()"> add </button>
+  </p>
+  <p>
+    <button  class="w3-btn w3-border" (click)="goBack()">
+
+      <i class="fa fa-arrow-left w3-large"></i><br> back
+    </button>
+  </p>
+</form>

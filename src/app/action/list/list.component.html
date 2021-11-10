@@ -1,0 +1,28 @@
+<div className="w3-row-padding">
+
+  <!-- <Link to="/admin/addAction" className="w3-btn w3-green">+</Link> -->
+  <a routerLink="add" class="w3-btn w3-green"> <i class="material-icons">add_box</i></a>
+
+
+
+  <h1>list des actions</h1>
+  <table class="w3-table-all">
+    <tr *ngFor="let action of actions">
+      <td> {{action.desc}}</td>
+      <td>
+
+  <a routerLink ="/action/{{action.id}}/params" class="w3-btn w3-green">  params </a>
+      </td>
+      <td >
+        <i class="material-icons">refresh</i>
+
+      </td>
+      <td >
+        <i class="material-icons">delete</i>
+      </td>
+    </tr>
+
+  </table>
+
+
+</div>

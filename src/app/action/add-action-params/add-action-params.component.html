@@ -1,0 +1,33 @@
+<p>add-action-params works!</p>
+
+
+<a routerLink="/" class="w3-btn w3-green"> home </a>
+
+
+<form class="w3-row-padding" [formGroup]="actionParamsForm">
+  <p>
+      <label htmlFor="actionName">key</label>
+      <input type="text"
+      formControlName="key"
+        class="w3-input w3-border"/>
+  </p>
+  <p>
+      <label htmlFor="actionDesc">key type </label>
+      <select  formControlName="dataType" class="w3-input w3-border">
+        <!-- <option  disabled>Choose data type </option> -->
+        <option *ngFor="let o of dataTypeOtions"  value="{{o.id}}">
+          {{o.value}}
+        </option>
+      </select>
+  </p>
+  <p>
+      <button  class="w3-btn w3-border" (click)="handleForm()"> add </button>
+  </p>
+  <p>
+    <button  class="w3-btn w3-border" (click)="goBack()">
+
+      <i class="fa fa-arrow-left w3-large"></i><br> back
+    </button>
+  </p>
+</form>
+

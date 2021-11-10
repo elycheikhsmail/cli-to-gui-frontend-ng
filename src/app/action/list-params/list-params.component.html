@@ -1,0 +1,29 @@
+<h1>list params for this action</h1>
+
+<div className="w3-row-padding">
+  <button (click)="goToHome()" class="w3-btn w3-green w3-margin">
+    home
+  </button>
+
+  <button (click)="goToAddActionParams()" class="w3-btn w3-green w3-margin">
+    <i class="material-icons">add_box</i>
+  </button>
+
+
+  <table class="w3-table-all">
+    <tr *ngFor="let a of actionParamsArray">
+      <td> {{a.key}}</td>
+
+      <td>
+        <i class="material-icons">refresh</i>
+
+      </td>
+      <td>
+        <i class="material-icons">delete</i>
+      </td>
+    </tr>
+
+  </table>
+
+
+</div>
